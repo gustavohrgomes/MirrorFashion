@@ -1,0 +1,111 @@
+.cores {
+  position: relative;
+  padding-top: 90px;
+}
+
+.cores label img {
+  display: block;
+  max-width: 100%;
+  border: 2px solid #CCC;
+}
+
+.cores label::after {
+  content: '';
+  display: block;
+
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 6px solid rgba(0,0,0,0);    
+
+  position: absolute;
+  top: 30px;
+
+  cursor: pointer;
+}
+
+.cores label:hover::after {
+  border: 6px solid rgba(0,0,0,0.1)
+}
+
+.cores legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cores input:checked + label::after {
+  border: 6px solid rgba(0,0,0,0.3);
+}
+
+.cores input:not(:checked) + label img {
+  display: none;
+}
+
+.cores input[type=radio] {
+  display: none;
+}
+
+label[for=verde]::after {
+  background-color: #33CC66;
+  left: 0;
+}
+
+label[for=rosa]::after {
+  background-color: #FF6666;
+  left: 60px;
+}
+
+label[for=azul]::after {
+  background-color: #6666FF;
+  left: 120px;
+}
+
+@media (min-width: 500px) {
+  .detalhes {
+      font-size: 1.2em;
+  }
+}
+
+@media (min-width: 630px) {
+    
+  fieldset {
+      display: inline-block;
+      vertical-align: top;
+
+      margin: 1em 0;
+      min-width: 240px;
+      width: 45%;        
+  }
+
+  .produto {
+      font-size: 1.2em;
+      position: relative;
+      padding-left: 40%;        
+  }
+
+  .cores {
+      position: static;
+      padding: 0;
+  }
+
+  .cores legend {
+      position: static;
+  }
+
+  .cores label img {
+      max-width: 35%;
+      max-height: 100%;
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .cores label::after {
+      position: static;
+      float: left;
+      margin-right: 10px;
+  }
+}
