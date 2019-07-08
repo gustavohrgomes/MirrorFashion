@@ -1,0 +1,127 @@
+/* ========== Tags =========== */
+body {
+    color: #333333;
+    font-family:  "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0 auto;        
+}
+h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #333333; /* É possível ajustar mais de uma propriedade em um atributo só */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+figure {
+    background-color: #F2EDED;
+    border: 1px solid #cccccc;
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+}
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* ============ IDs ============= */ 
+#centro-distribuicao {
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+#rodape {
+    color: #777777;
+    margin: 30px;
+    padding: 30px;
+}
+    #rodape img { /* Seletor de Descendentes */
+        margin-right: 30px;
+        vertical-align: middle;
+        width: 94px;
+    }
+
+#familia-pelho {
+    float: right;
+    margin: 0 0 30px 30px;    
+}
+
+/* ============ Classes ============ */
+.mirror-fashion h1 {
+    background-image: url(/img/sobre-background.jpg);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.sobre {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.15;
+}
+    .sobre p {
+        margin: 10px 0;
+        padding: 0 45px;
+        text-indent: 15px;
+    }
+.diferenciais ul{
+    margin: 10px 0;
+    padding: 0 45px;    
+    list-style: disc;
+}
+
+/* ============ Child and Sibling Selectors ============ */
+.sobre p::first-letter {
+    font-weight: bold;
+}
+.sobre h1 + p {
+    text-indent: 0;
+}
+.sobre :not(p) + p::first-line {
+    font-variant: small-caps;
+}
+
+/* ======= Media Queries ======== */
+@media (max-width: 939px) {
+    /* Estilos para mobile */        
+    article h2 {
+        font-size: 20px;
+    }    
+    figcaption {
+        font-size: 13px;
+    }
+    #centro-distribuicao {
+        width: auto;
+        padding: 10px;
+    }    
+    #familia-pelho {
+        float: none;
+        width: auto;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;       
+    }
+    .mirror-fashion h1{
+        font-size: 25px;
+    }
+    .sobre p{
+        text-align: justify;
+        padding: 5px;        
+    }
+    @media (min-width: 480px) {
+        /* Estilos para Tablet e Modo Paisagem com resolução minima de 480px */
+        #familia-pelho {            
+            width: 300px;            
+        }
+        
+    }
+    @media (min-width: 720px) {
+        /* Estilos para Tablet e Modo Paisagem com resolução minima de 720px */
+        #centro-distribuicao {            
+            width: 550px;            
+        }
+        #familia-pelho {
+            float: right;
+            margin: 0 0 30px 30px;
+        }
+    }
+}
