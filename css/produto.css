@@ -34,8 +34,8 @@ td:first-child {
 
 .cores label img {
     display: block;
-    max-width: 100%;
-    border: 2px solid #CCC;
+    max-width: 100%;  
+    border: 2px solid #CCC;  
 }
 
 .cores label::after {
@@ -46,7 +46,8 @@ td:first-child {
     width: 50px;
     height: 50px;
     box-sizing: border-box;
-    border: 6px solid rgba(0,0,0,0);    
+    border: 6px solid rgba(0,0,0,0);
+    transition: 0.5s;
 
     position: absolute;
     top: 30px;
@@ -55,7 +56,7 @@ td:first-child {
 }
 
 .cores label:hover::after {
-    border: 6px solid rgba(0,0,0,0.1)
+    border: 6px solid rgba(0,0,0,0.1);
 }
 
 .cores legend {
@@ -156,7 +157,22 @@ label[for=azul]::after {
     max-width: 36em;
 }
 
+/* == Classe .tamanhos */
+.tamanhos output {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+
+    line-height: 44px;
+    text-align: center;
+
+    border: 3px solid #666;
+    border-radius: 50%;
+    color: #555;
+}
+
 /* == Media Queries == */
+
 @media (min-width: 500px) {
     .detalhes {
         font-size: 1.2em;
@@ -168,7 +184,7 @@ label[for=azul]::after {
     fieldset {
         display: inline-block;
         vertical-align: top;
-
+  
         margin: 1em 0;
         min-width: 240px;
         width: 45%;        
@@ -177,7 +193,7 @@ label[for=azul]::after {
     .produto {
         font-size: 1.2em;
         position: relative;
-        padding-left: 40%;        
+        padding-left: 40%;
     }
 
     .cores {
