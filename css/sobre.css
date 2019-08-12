@@ -2,7 +2,7 @@
 body {
     color: #333333;
     font-family:  "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    margin: 0 auto;        
+    margin: 0 auto;  
 }
 h2 {
     font-size: 24px;
@@ -43,6 +43,14 @@ figcaption {
 #familia-pelho {
     float: right;
     margin: 0 0 30px 30px;    
+}
+#iframe-video {
+    float: left;    
+    margin-bottom: 10px;
+}
+#iframe-map {
+    float: right;    
+    margin-bottom: 10px;
 }
 
 /* ============ Classes ============ */
@@ -100,18 +108,25 @@ figcaption {
         margin-left: auto;
         margin-right: auto;       
     }
+    #iframe-video, #iframe-map {       
+        float: none;
+        width: auto;
+        height: 215px;
+        margin: 0 50px 10px 50px;
+    }
+
     .mirror-fashion h1{
         font-size: 25px;
     }
     .sobre p{
         text-align: justify;
         padding: 5px;        
-    }
+    }    
     @media (min-width: 480px) {
         /* Estilos para Tablet e Modo Paisagem com resolução minima de 480px */
         #familia-pelho {            
             width: 300px;            
-        }
+        }          
         
     }
     @media (min-width: 720px) {
@@ -123,5 +138,15 @@ figcaption {
             float: right;
             margin: 0 0 30px 30px;
         }
+    }
+}
+@media (min-width: 768px) {
+    #iframe-video {
+        float: left;    
+        margin: 0 0 10px 0;
+    }
+    #iframe-map {
+        float: right;    
+        margin: 0 0 10px 0;
     }
 }
